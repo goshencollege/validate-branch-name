@@ -1,0 +1,13 @@
+name: "Validate Branch Name"
+description: "Ensure that a branch name conforms to a specific pattern"
+branding:
+  icon: "git-branch"
+  color: "purple"
+inputs:
+  pattern:
+    description: "Regex pattern that the branch name should match"
+    required: true
+    default: "^[a-z-]+$"
+runs:
+  using: "node12"
+  main: "dist/index.js"

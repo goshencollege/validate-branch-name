@@ -1,0 +1,27 @@
+{
+  "name": "validate-branch-name",
+  "version": "1.0.0",
+  "description": "Ensure that a branch name conforms to a specific pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goshencollege/validate-branch-name.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goshencollege/validate-branch-name/issues"
+  },
+  "homepage": "https://github.com/goshencollege/validate-branch-name#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0"
+  }
+}
