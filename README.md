@@ -11,7 +11,7 @@ This action ensures that a branch name conforms to a specific pattern.
 ## Example usage
 
 ```yml
-uses: goshencollege/validate-branch-name@v1.0.0
+uses: goshencollege/validate-branch-name@v1.0.1
 with:
   pattern: "^[a-z-]+$" # regex pattern forces the branch name to have letters or a hyphen
 ```

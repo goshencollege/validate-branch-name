@@ -1,4 +1,5 @@
-import { getInput, setFailed } from "@actions/core";
+const core = require("@actions/core");
+const github = require("@actions/github");
 
 async function run() {
   try {
@@ -8,15 +9,15 @@ async function run() {
     }
 
     const branchName = github.context.payload.ref.replace("refs/heads/", "");
-    const pattern = getInput("pattern");
+    const pattern = core.getInput("pattern");
 
     if (!nameMatchesPattern(branchName, pattern)) {
-      setFailed(
+      core.setFailed(
         `The branch name ${branchName} does not match the predefined regex pattern - ${pattern}`
       );
     }
   } catch (error) {
-    setFailed(error.message);
+    core.setFailed(error.message);
   }
 }
 
